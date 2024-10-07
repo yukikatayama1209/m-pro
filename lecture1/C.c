@@ -1,8 +1,8 @@
 #include <stdio.h>
-double sumArray(double arr[], int n){
-      double sum = 0;
+double calcSum( double *a, int n){
+      double sum = 0.0;
       for (int i = 0; i < n; i++){
-            sum += arr[i];
+            sum += a[i];
       }
       return sum;
 }
@@ -10,10 +10,10 @@ double sumArray(double arr[], int n){
 int main(){
       int n;
       scanf("%d", &n);
-      double arr[n];
+      double *a;;
       for (int i = 0; i < n; i++){
-            scanf("%lf", &arr[i]);
+            scanf("%lf", &a[i]);
       }
-      printf("%.2lf\n", sumArray(arr, n));
+      printf("%.2lf\n", sumArray(a, n));
       return 0;
 }
